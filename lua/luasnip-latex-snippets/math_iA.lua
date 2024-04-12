@@ -115,33 +115,34 @@ function M.retrieve(is_math)
     parse_snippet({ trig = "...", name = "ldots", priority = 100 }, "\\ldots "),
     parse_snippet({ trig = "!>", name = "mapsto" }, "\\mapsto "),
     parse_snippet({ trig = "iff", name = "iff" }, "\\iff"),
-    parse_snippet({ trig = "siff", name = "short iff", priority = 100}, "\\Leftrightarrow"),
+    parse_snippet({ trig = "siff", name = "short iff", priority = 100 }, "\\Leftrightarrow"),
     parse_snippet({ trig = "ooo", name = "\\infty" }, "\\infty"),
     parse_snippet({ trig = "rij", name = "mrij" }, "(${1:x}_${2:n})_{${3:$2}\\in${4:\\N}}$0"),
-    parse_snippet({ trig = "nabl", name = "nabla" }, "\\nabla "),
-    parse_snippet({ trig = "<!", name = "normal" }, "\\triangleleft "),
+    parse_snippet({ trig = "nabl", name = "nabla" }, "\\nabla"),
+    parse_snippet({ trig = "<|", name = "normal" }, "\\triangleleft"),
+    parse_snippet({ trig = "|>", name = "normal" }, "\\triangleright"),
     parse_snippet({ trig = "floor", name = "floor" }, "\\left\\lfloor $1 \\right\\rfloor$0"),
     parse_snippet({ trig = "mcal", name = "mathcal" }, "\\mathcal{$1}$0"),
     parse_snippet({ trig = "//", name = "Fraction" }, "\\frac{$1}{$2}$0"),
     parse_snippet({ trig = "\\\\\\", name = "setminus" }, "\\setminus"),
-    parse_snippet({ trig = "->", name = "to", priority = 100 }, "\\to "),
-    parse_snippet({ trig = "-->", name = "long to", priority = 200 }, "\\longrightarrow "),
+    parse_snippet({ trig = "->", name = "to", priority = 100 }, "\\to"),
+    parse_snippet({ trig = "-->", name = "long to", priority = 200 }, "\\longrightarrow"),
 
     parse_snippet({ trig = "letw", name = "let omega" }, "Let $\\Omega \\subset \\C$ be open."),
     parse_snippet({ trig = "nnn", name = "bigcap" }, "\\bigcap_{${1:i \\in ${2: I}}} $0"),
     parse_snippet({ trig = "norm", name = "norm" }, "\\|$1\\|$0"),
-    parse_snippet({ trig = "<>", name = "hokje" }, "\\diamond "),
+    parse_snippet({ trig = "<>", name = "hokje" }, "\\diamond"),
     parse_snippet({ trig = ">>", name = ">>" }, "\\gg"),
     parse_snippet({ trig = "<<", name = "<<" }, "\\ll"),
 
     parse_snippet({ trig = "stt", name = "text subscript" }, "_\\text{$1} $0"),
     parse_snippet({ trig = "tt", name = "text" }, "\\text{$1}$0"),
 
-    parse_snippet({ trig = "xx", name = "cross" }, "\\times "),
+    parse_snippet({ trig = "xx", name = "cross" }, "\\times"),
 
-    parse_snippet({ trig = "**", name = "cdot", priority = 100 }, "\\cdot "),
+    parse_snippet({ trig = "**", name = "cdot", priority = 100 }, "\\cdot"),
 
-    parse_snippet({ trig = ":=", name = "colon equals (lhs defined as rhs)" }, "\\coloneqq "),
+    parse_snippet({ trig = ":=", name = "colon equals (lhs defined as rhs)" }, "\\coloneqq"),
 
     parse_snippet(
       { trig = "cvec", name = "column vector" },
@@ -175,10 +176,10 @@ function M.retrieve(is_math)
     parse_snippet({ trig = "=<", name = "implied by" }, "\\impliedby"),
     parse_snippet({ trig = "<<", name = "<<" }, "\\ll"),
 
-    parse_snippet({ trig = "<=", name = "leq" }, "\\le "),
-    parse_snippet({ trig = ">=", name = "geq" }, "\\ge "),
+    parse_snippet({ trig = "<=", name = "leq" }, "\\le"),
+    parse_snippet({ trig = ">=", name = "geq" }, "\\ge"),
     parse_snippet({ trig = "invs", name = "inverse" }, "^{-1}"),
-    parse_snippet({ trig = "~~", name = "~" }, "\\sim "),
+    parse_snippet({ trig = "~~", name = "~" }, "\\sim"),
     parse_snippet({ trig = "conj", name = "conjugate" }, "\\overline{$1}$0"),
   }
 end
