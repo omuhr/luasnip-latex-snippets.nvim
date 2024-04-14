@@ -107,13 +107,13 @@ function M.retrieve(is_math)
     parse_snippet({ trig = "xmm", name = "x" }, "x_{m}"),
     parse_snippet({ trig = "R0+", name = "R0+" }, "\\mathbb{R}_0^+"),
 
-    parse_snippet({ trig = "notin", name = "not in " }, "\\not\\in "),
+    parse_snippet({ trig = "notin", name = "not in " }, "\\not\\in"),
 
-    parse_snippet({ trig = "cc", name = "subset" }, "\\subset "),
+    parse_snippet({ trig = "cc", name = "subset" }, "\\subset"),
 
     parse_snippet({ trig = "<->", name = "leftrightarrow", priority = 200 }, "\\leftrightarrow"),
-    parse_snippet({ trig = "...", name = "ldots", priority = 100 }, "\\ldots "),
-    parse_snippet({ trig = "!>", name = "mapsto" }, "\\mapsto "),
+    parse_snippet({ trig = "...", name = "ldots", priority = 100 }, "\\ldots"),
+    parse_snippet({ trig = "!>", name = "mapsto" }, "\\mapsto"),
     parse_snippet({ trig = "iff", name = "iff" }, "\\iff"),
     parse_snippet({ trig = "siff", name = "short iff", priority = 100 }, "\\Leftrightarrow"),
     parse_snippet({ trig = "ooo", name = "\\infty" }, "\\infty"),
