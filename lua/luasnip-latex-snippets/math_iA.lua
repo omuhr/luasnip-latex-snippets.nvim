@@ -89,6 +89,18 @@ function M.retrieve(is_math)
         return string.format("\\overleftarrow{%s}", snip.captures[1])
       end, {})
     ),
+    s(
+      {
+        trig = "(%a+)tilde",
+        wordTrig = false,
+        regTrig = true,
+        name = "tilde",
+        priority = 100,
+      },
+      f(function(_, snip)
+        return string.format("\\tilde{%s}", snip.captures[1])
+      end, {})
+    ),
 
     parse_snippet({ trig = "td", name = "to the ... power ^{}" }, "^{$1}$0"),
     parse_snippet({ trig = "rd", name = "to the ... power ^{()}" }, "^{($1)}$0"),
@@ -172,8 +184,8 @@ function M.retrieve(is_math)
     parse_snippet({ trig = "~~", name = "~" }, "\\sim"),
     parse_snippet({ trig = "compl", name = "complement" }, "^{c}"),
     parse_snippet({ trig = "__", name = "subscript" }, "_{$1}$0"),
-    parse_snippet({ trig = "simp", name = "short implies" }, "\\Rightarrow"),
     parse_snippet({ trig = "=>", name = "implies" }, "\\implies"),
+    parse_snippet({ trig = "simp", name = "short implies" }, "\\Rightarrow"),
     parse_snippet({ trig = "=<", name = "implied by" }, "\\impliedby"),
     parse_snippet({ trig = "<<", name = "<<" }, "\\ll"),
 
