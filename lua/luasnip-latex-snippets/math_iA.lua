@@ -179,7 +179,7 @@ function M.retrieve(is_math)
       "\\int_{${1:-\\infty}}^{${2:\\infty}} ${3:${TM_SELECTED_TEXT}} $0"
     ),
 
-    parse_snippet({ trig = "==", name = "equals" }, [[&= $1 \\\\]]),
+    parse_snippet({ trig = "==", name = "equals" }, [[=\:& $1 \\\\]]),
     parse_snippet({ trig = "!=", name = "not equals" }, "\\neq"),
     parse_snippet({ trig = "~~", name = "~" }, "\\sim"),
     parse_snippet({ trig = "compl", name = "complement" }, "^{c}"),
