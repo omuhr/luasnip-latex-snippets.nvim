@@ -155,8 +155,8 @@ function M.retrieve(is_math)
     parse_snippet({ trig = "ZZ", name = "Z" }, "\\mathbb{Z}"),
     parse_snippet({ trig = "UU", name = "cup" }, "\\cup "),
     parse_snippet({ trig = "NN", name = "n" }, "\\mathbb{N}"),
-    parse_snippet({ trig = "||", name = "mid" }, " \\mid "),
-    parse_snippet({ trig = "Nn", name = "cap" }, "\\cap "),
+    parse_snippet({ trig = "||", name = "mid" }, " \\mid"),
+    parse_snippet({ trig = "Nn", name = "cap" }, "\\cap"),
     parse_snippet({ trig = "bmat", name = "bmat" }, "\\begin{bmatrix} $1 \\end{bmatrix} $0"),
     parse_snippet({ trig = "uuu", name = "bigcup" }, "\\bigcup_{${1:i \\in ${2: I}}} $0"),
     parse_snippet({ trig = "DD", name = "D" }, "\\mathbb{D}"),
@@ -168,18 +168,18 @@ function M.retrieve(is_math)
     ),
 
     parse_snippet({ trig = "==", name = "equals" }, [[&= $1 \\\\]]),
-    parse_snippet({ trig = "!=", name = "not equals" }, "\\neq "),
+    parse_snippet({ trig = "!=", name = "not equals" }, "\\neq"),
+    parse_snippet({ trig = "~~", name = "~" }, "\\sim"),
     parse_snippet({ trig = "compl", name = "complement" }, "^{c}"),
     parse_snippet({ trig = "__", name = "subscript" }, "_{$1}$0"),
-    parse_snippet({ trig = "=>", name = "implies" }, "\\implies"),
     parse_snippet({ trig = "simp", name = "short implies" }, "\\Rightarrow"),
+    parse_snippet({ trig = "=>", name = "implies" }, "\\implies"),
     parse_snippet({ trig = "=<", name = "implied by" }, "\\impliedby"),
     parse_snippet({ trig = "<<", name = "<<" }, "\\ll"),
 
     parse_snippet({ trig = "<=", name = "leq" }, "\\le"),
     parse_snippet({ trig = ">=", name = "geq" }, "\\ge"),
     parse_snippet({ trig = "invs", name = "inverse" }, "^{-1}"),
-    parse_snippet({ trig = "~~", name = "~" }, "\\sim"),
     parse_snippet({ trig = "conj", name = "conjugate" }, "\\overline{$1}$0"),
   }
 end
