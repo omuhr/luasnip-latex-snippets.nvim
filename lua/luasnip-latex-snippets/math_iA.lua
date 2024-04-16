@@ -193,6 +193,39 @@ function M.retrieve(is_math)
     parse_snippet({ trig = ">=", name = "geq" }, "\\ge"),
     parse_snippet({ trig = "invs", name = "inverse" }, "^{-1}"),
     parse_snippet({ trig = "conj", name = "conjugate" }, "\\overline{$1}$0"),
+
+    parse_snippet(
+      { trig = "lr(", name = "left( right)" },
+      "\\left( ${1:${TM_SELECTED_TEXT}} \\right)$0"
+    ),
+    parse_snippet(
+      { trig = "lr|", name = "left| right|" },
+      "\\left| ${1:${TM_SELECTED_TEXT}} \\right|$0"
+    ),
+    parse_snippet(
+      { trig = "lr{", name = "left{ right}" },
+      "\\left\\{ ${1:${TM_SELECTED_TEXT}} \\right\\\\}$0"
+    ),
+    parse_snippet(
+      { trig = "lr[", name = "left[ right]" },
+      "\\left[ ${1:${TM_SELECTED_TEXT}} \\right]$0"
+    ),
+    parse_snippet(
+      { trig = "lra", name = "leftangle rightangle" },
+      "\\left< ${1:${TM_SELECTED_TEXT}} \\right>$0"
+    ),
+
+    parse_snippet({ trig = "le(", name = "left(" }, "\\left("),
+    parse_snippet({ trig = "le|", name = "left|" }, "\\left|"),
+    parse_snippet({ trig = "le{", name = "left{" }, "\\left\\{"),
+    parse_snippet({ trig = "le[", name = "left[" }, "\\left["),
+    parse_snippet({ trig = "lea", name = "leftangle" }, "\\left<"),
+
+    parse_snippet({ trig = "ri(", name = "right)" }, " \\right)"),
+    parse_snippet({ trig = "ri|", name = "right|" }, " \\right|"),
+    parse_snippet({ trig = "ri{", name = "right}" }, " \\right\\\\}"),
+    parse_snippet({ trig = "ri[", name = "right]" }, "\\right]"),
+    parse_snippet({ trig = "ria", name = "rightangle" }, "}\\right>"),
   }
 end
 
