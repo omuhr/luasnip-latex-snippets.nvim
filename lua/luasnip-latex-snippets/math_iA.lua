@@ -141,13 +141,13 @@ function M.retrieve(is_math)
     parse_snippet({ trig = "-->", name = "long to", priority = 200 }, "\\longrightarrow"),
 
     parse_snippet({ trig = "letw", name = "let omega" }, "Let $\\Omega \\subset \\C$ be open."),
-    parse_snippet({ trig = "nnn", name = "bigcap" }, "\\bigcap_{${1:i \\in ${2: I}}} $0"),
+    parse_snippet({ trig = "nnn", name = "bigcap" }, "\\bigcap_{${1:i \\in ${2: I}}}$0"),
     parse_snippet({ trig = "norm", name = "norm" }, "\\|$1\\|$0"),
     parse_snippet({ trig = "<>", name = "hokje" }, "\\diamond"),
     parse_snippet({ trig = ">>", name = ">>" }, "\\gg"),
     parse_snippet({ trig = "<<", name = "<<" }, "\\ll"),
 
-    parse_snippet({ trig = "stt", name = "text subscript" }, "_\\text{$1} $0"),
+    parse_snippet({ trig = "stt", name = "text subscript" }, "_\\text{$1}$0"),
     parse_snippet({ trig = "tt", name = "text" }, "\\text{$1}$0"),
 
     parse_snippet({ trig = "xx", name = "cross" }, "\\times"),
