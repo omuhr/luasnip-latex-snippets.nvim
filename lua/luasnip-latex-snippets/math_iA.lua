@@ -221,10 +221,10 @@ function M.retrieve(is_math)
     parse_snippet({ trig = "le[", name = "left[" }, "\\left["),
     parse_snippet({ trig = "lea", name = "leftangle" }, "\\left<"),
 
-    parse_snippet({ trig = "ri(", name = "right)" }, " \\right)"),
+    parse_snippet({ trig = "ri)", name = "right)" }, " \\right)"),
     parse_snippet({ trig = "ri|", name = "right|" }, " \\right|"),
-    parse_snippet({ trig = "ri{", name = "right}" }, " \\right\\\\}"),
-    parse_snippet({ trig = "ri[", name = "right]" }, "\\right]"),
+    parse_snippet({ trig = "ri}", name = "right}" }, " \\right\\\\}"),
+    parse_snippet({ trig = "ri]", name = "right]" }, "\\right]"),
     parse_snippet({ trig = "ria", name = "rightangle" }, "}\\right>"),
   }
 end
