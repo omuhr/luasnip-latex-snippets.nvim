@@ -149,6 +149,7 @@ function M.retrieve(is_math)
 
     parse_snippet({ trig = "stt", name = "text subscript" }, "_\\text{$1}$0"),
     parse_snippet({ trig = "tt", name = "text" }, "\\text{$1}$0"),
+    parse_snippet({ trig = "lab", name = "label" }, "\\label{$1}$0"),
 
     parse_snippet({ trig = "xx", name = "cross" }, "\\times"),
 
@@ -199,16 +200,28 @@ function M.retrieve(is_math)
       "\\left( ${1:${TM_SELECTED_TEXT}} \\right)$0"
     ),
     parse_snippet(
-      { trig = "lr|", name = "left| right|" },
-      "\\left| ${1:${TM_SELECTED_TEXT}} \\right|$0"
+      { trig = "lrp", name = "leftparens rightparens" },
+      "\\left( ${1:${TM_SELECTED_TEXT}} \\right)$0"
+    ),
+    parse_snippet(
+      { trig = "lr[", name = "left[ right]" },
+      "\\left[ ${1:${TM_SELECTED_TEXT}} \\right]$0"
+    ),
+    parse_snippet(
+      { trig = "lrb", name = "leftbracket rightbracket" },
+      "\\left[ ${1:${TM_SELECTED_TEXT}} \\right]$0"
     ),
     parse_snippet(
       { trig = "lr{", name = "left{ right}" },
       "\\left\\{ ${1:${TM_SELECTED_TEXT}} \\right\\\\}$0"
     ),
     parse_snippet(
-      { trig = "lr[", name = "left[ right]" },
-      "\\left[ ${1:${TM_SELECTED_TEXT}} \\right]$0"
+      { trig = "lrc", name = "leftcurly rightcurly" },
+      "\\left\\{ ${1:${TM_SELECTED_TEXT}} \\right\\\\}$0"
+    ),
+    parse_snippet(
+      { trig = "lr|", name = "left| right|" },
+      "\\left| ${1:${TM_SELECTED_TEXT}} \\right|$0"
     ),
     parse_snippet(
       { trig = "lra", name = "leftangle rightangle" },
@@ -216,15 +229,20 @@ function M.retrieve(is_math)
     ),
 
     parse_snippet({ trig = "le(", name = "left(" }, "\\left("),
-    parse_snippet({ trig = "le|", name = "left|" }, "\\left|"),
+    parse_snippet({ trig = "lep", name = "leftparens" }, "\\left("),
+    parse_snippet({ trig = "leb", name = "leftbracket" }, "\\left["),
     parse_snippet({ trig = "le{", name = "left{" }, "\\left\\{"),
-    parse_snippet({ trig = "le[", name = "left[" }, "\\left["),
+    parse_snippet({ trig = "lec", name = "leftcurly" }, "\\left\\{"),
+    parse_snippet({ trig = "le|", name = "left|" }, "\\left|"),
     parse_snippet({ trig = "lea", name = "leftangle" }, "\\left<"),
 
     parse_snippet({ trig = "ri)", name = "right)" }, " \\right)"),
-    parse_snippet({ trig = "ri|", name = "right|" }, " \\right|"),
-    parse_snippet({ trig = "ri}", name = "right}" }, " \\right\\\\}"),
+    parse_snippet({ trig = "rip", name = "rightparens" }, " \\right)"),
     parse_snippet({ trig = "ri]", name = "right]" }, "\\right]"),
+    parse_snippet({ trig = "rib", name = "rightbracket" }, "\\right]"),
+    parse_snippet({ trig = "ri}", name = "right}" }, " \\right\\\\}"),
+    parse_snippet({ trig = "ric", name = "rightcurly" }, " \\right\\\\}"),
+    parse_snippet({ trig = "ri|", name = "right|" }, " \\right|"),
     parse_snippet({ trig = "ria", name = "rightangle" }, "}\\right>"),
   }
 end
