@@ -181,7 +181,7 @@ function M.retrieve(is_math)
     ),
 
     parse_snippet({ trig = "==", name = "equals" }, [[=\:& $1 \\\\]]),
-    parse_snippet({ trig = "ref==", name = "equals" }, [[\\overset{\\ref{$1}}{=}\:& $0 \\\\]]),
+    parse_snippet({ trig = "ref=", name = "equals_ref" }, [[\\overset{\\ref{$1}}{=}\:& $0 \\\\]]),
     parse_snippet({ trig = "!=", name = "not equals" }, "\\neq"),
     parse_snippet({ trig = "~~", name = "~" }, "\\sim"),
     parse_snippet({ trig = "compl", name = "complement" }, "^{c}"),
